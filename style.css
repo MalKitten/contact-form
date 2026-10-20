@@ -241,7 +241,14 @@ footer a {
   color: var(--color-txt);
 }
 
-@media screen and (min-width: 480px) {
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
+}
+
+
+@media screen and (min-width: 30rem) {
 
   main {
     margin-block-start: 6vw;

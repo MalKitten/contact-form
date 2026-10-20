@@ -12,7 +12,7 @@ function manageContent () {
     
     function getErr (classList) {
       const err = getErrMsg(el, classList);
-      if (err != null) return requiredErr(el, err);
+      if (err !== null) return requiredErr(el, err);
     }
 
     el.addEventListener('invalid', e => {
@@ -58,7 +58,7 @@ function requiredErr (e, msg) {
 
 function getErrMsg (el, err) {
   const parent = el.parentElement;
-    let result = grab(err, true, parent);
+    const result = grab(err, true, parent);
     if (!result) return grab(err, true, parent.parentElement);
     return result;
 }
